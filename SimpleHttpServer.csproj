@@ -8,7 +8,7 @@
     <ProjectGuid>{4FA45FB4-1B9B-4D5D-A2DF-A8169E6EA43D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <RootNamespace>Bend.Util</RootNamespace>
     <AssemblyName>SimpleHttpServer</AssemblyName>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\HttpServer.cs" />
+    <Compile Include="HttpProcessor.cs" />
+    <Compile Include="MyHttpServer.cs" />
     <Compile Include="SimpleHttpServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

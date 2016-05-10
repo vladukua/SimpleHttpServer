@@ -22,6 +22,7 @@ namespace Bend.Util.Abstract
 
         public void Listen()
         {
+            Console.WriteLine("------------------------------------------------Simple Http Server Started--------------------------------------------------");
             _isActive = true;
             _listener = new TcpListener(Port);
             _listener.Start();

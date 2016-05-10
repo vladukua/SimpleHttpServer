@@ -26,7 +26,7 @@ namespace Bend.Util
 
         public Hashtable QueryString { get; set; }
 
-        private const int BufSize = 4096;
+        private const int BufSize = 16*1024;
 
         private const int MaxPostSize = 10 * 1024 * 1024; // 10MB
 
@@ -75,6 +75,7 @@ namespace Bend.Util
                 {
                     HandlePostRequest();
                 }
+                Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------");
             }
             catch (Exception e)
             {
@@ -99,6 +100,7 @@ namespace Bend.Util
             HttpUrl = tokens[1];
             HttpProtocolVersionstring = tokens[2];
 
+            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("starting: " + request);
         }
 

@@ -28,6 +28,9 @@ namespace Bend.Util
             {
                 p.OutputStream.WriteLine("<p>{0} : <b>{1}</b></p>", key, p.QueryString[key]);
             }
+
+            p.OutputStream.WriteLine("</body>");
+            p.OutputStream.WriteLine("</html>");
         }
 
         public override void HandlePostRequest(HttpProcessor p, StreamReader inputData)
@@ -39,6 +42,10 @@ namespace Bend.Util
             p.OutputStream.WriteLine("<html><body><h1>test server</h1>");
             p.OutputStream.WriteLine("<a href=/test>return</a><p>");
             p.OutputStream.WriteLine("postbody: <pre>{0}</pre>", data);
+            p.OutputStream.WriteLine("</p>");
+
+            p.OutputStream.WriteLine("</body>");
+            p.OutputStream.WriteLine("</html>");
         }
     }
 
